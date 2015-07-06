@@ -1,0 +1,199 @@
+<br>
+
+
+<div class="row" class="info-container">
+	<header class="class-md-12 intro-header">
+		<div class="col-md-3" id="learning-tag">
+			<h3>Build your learning list </h3>
+		</div>
+		<div class="col-md-9" id="learning-focus">
+			You want to focus on <br>
+			<strong> Leading teams </strong>
+		</div>
+	</header>
+
+  <div class="col-md-3" style="padding: 0;">
+		<div class="start-log-container">
+			<button class="btn btn-primary"> Create New Log </button>
+		</div>
+  		<section class="log-form">
+			<header>
+				<h4> Your Log List </h4>
+			</header>
+			<footer>
+			<form {{action "login" on="submit"}}>
+				<div class="control-group">
+					<div class="control-label">
+						<label> Details </label>
+					</div>
+					<div class="control">
+						{{input class="input-group" value=details placeholder="Details of your session" type="text"}}
+					</div>
+				</div>
+
+				<div class="control-group">
+					<div class="control-label">
+						<label> Log Hours </label>
+					</div>
+					<div class="control">
+						{{input class="input-group" value=duration placeholder="How many hours?" type="text"}}
+					</div>
+				</div>
+
+				<div class="control-group">
+					<div class="control-label">
+						<label> Weaknesses </label>
+					</div>
+					<div class="control">
+						{{input class="input-group" value=weakness placeholder="What were weaknesses?" type="text"}}
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+</footer>
+  		</section>
+
+
+  </div>
+
+
+
+  <div class="col-md-9" style="padding: 0;">
+
+  	<div class="search-container">
+  		<div class="col-md-5" id="search-text">
+  			 64 Results
+  		</div>
+  		<div class="col-md-7">
+  			<input placeholder="Leading teams..">
+  		</div>
+  	</div>
+
+	<div class="card-display">
+		<div class="card">
+			<header>
+				
+			</header>
+			<footer>
+
+				<h5>
+					Leading at a higher level 
+				</h5>
+				<div class="card-nav">
+
+					<span class="add-button">  </span>
+				</div>
+
+			</footer>
+		</div>
+
+		<div class="card">
+			<header>
+				
+			</header>
+			<footer>
+
+				<h5>
+					Essential guide to leading your team
+				</h5>
+				<div class="card-nav">
+					<span class="add-button">  </span>
+				</div>
+
+			</footer>
+		</div>
+		<div class="card">
+			<header>
+				
+			</header>
+			<footer>
+
+				<h5>
+					Sandler Manager Playbook 
+				</h5>
+				<div class="card-nav">
+					
+					<span class="add-button"> </span>
+				</div>
+
+			</footer>
+		</div>
+
+		<div class="card">
+			<header>
+			
+			</header>
+			<footer>
+
+				<h5>
+					lkjasdklas
+				</h5>
+				<div class="card-nav">
+					
+					<span class="add-button">  </span>
+				</div>
+
+			</footer>
+		</div>
+
+		<div class="card">
+			<header>
+				
+			</header>
+			<footer>
+
+				<h5>
+					lkjasdklas
+				</h5>
+				<div class="card-nav">
+					<span class="add-button">  </span>
+				</div>
+
+			</footer>
+		</div>
+		<div class="card">
+			<header>
+				
+			</header>
+			<footer>
+
+				<h5>
+					lkjasdklas
+				</h5>
+				<div class="card-nav">
+					
+					<span class="add-button"> + </span>
+				</div>
+
+			</footer>
+		</div>
+
+
+		<br>
+	</div>
+
+
+
+
+
+  </div>
+
+
+	<div class="analytics">
+		Analytics
+		{{outlet}}
+	</div>
+
+		{{firstName}}'s {{musicGenre}} practice log
+		{{#each artist in model}}
+			<p>Name: {{artist.name}}</p>
+			<p>Details: {{artist.info}}</p>
+			<p>Hours: {{artist.duration}}</p>
+			<p>Weaknesses: {{artist.weakness}}</p>
+		{{/each}}
+
+
+</div>
+
+
+

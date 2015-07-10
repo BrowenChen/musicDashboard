@@ -1,5 +1,6 @@
-<br>
 
+
+<br>
 
 <div class="row" class="info-container">
 	<header class="class-md-12 intro-header">
@@ -171,18 +172,76 @@
 
 		<br>
 	</div>
-
-
-
-
-
   </div>
 
-
-	<div class="analytics">
-		Analytics
-		{{outlet}}
+</div>
+<hr>
+<div class="row info-container analytics">
+	<div class="analytics-card">
+		Rep
 	</div>
+	<div class="analytics-card">
+		Task Queue
+	</div>
+	<div class="analytics-card" id="last-card">
+		Calendar View
+	</div>
+
+	{{outlet}}
+</div>
+
+<div class="row info-container analytics">
+	<div class="analytics-card">
+		{{calendar-map}}
+	</div>
+
+</div>
+
+
+
+
+{{!-- <div id="cal-heatmap">s</div>
+<script type="text/javascript">
+
+
+    ///////////////////////////////////////////////////
+    // Edit from here
+	console.log("debugging calendar");
+	var calendar = new CalHeatMap();
+	console.log(calendar);
+	// calendar.init({
+	// 	data: data,
+	// 	start: new Date(2000, 0),
+	// 	domain : "year",
+	// 	subDomain : "day",
+	// 	range : 1,
+	// 	scale: [40, 60, 80, 100],
+	// 	itemName: ["chat perdu", "chats perdus"],
+	// 	cellLabel: {
+	// 		empty: "Aucune données pour le {date}",
+	// 		filled: "il y a eu {count} {name} le {date}"
+	// 	},
+	// 	scaleLabel: {
+	// 		lower: "Belle journée, il y a eu moins de {min} {name}",
+	// 		inner: "Pas mal, entre {down} et {up} {name}",
+	// 		upper: "Peut faire mieux, plus de {max} {name}"
+	// 	},
+	// 	format: {
+	// 		date: function(date) {
+	// 			return moment(date).format("LL");
+	// 		},
+	// 		legend: null,
+	// 	}
+	// });
+
+
+    // End edition    
+    ///////////////////////////////////////////////////
+
+</script>
+ --}}
+
+
 
 		{{firstName}}'s {{musicGenre}} practice log
 		{{#each artist in model}}
@@ -192,8 +251,18 @@
 			<p>Weaknesses: {{artist.weakness}}</p>
 		{{/each}}
 
+<style>
+	#cal-heatmap {
+		border: 1px solid green;
+		overflow: hidden;
+	}
+</style>
+<div id="cal-heatmap"></div>
+<script type="text/javascript">
+	var cal = new CalHeatMap();
+	cal.init({});
+</script>
 
-</div>
 
 
 

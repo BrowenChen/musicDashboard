@@ -5,12 +5,10 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-// Router.map(function() {
-//   this.route('artists', function() {
-//     this.route('song');
-//   });
-// });
-
+//Routing posts page
+Router.map(function() {
+  this.resource("posts", function() {});
+});
 
 Router.map(function() {
   this.resource("authors", function() {});
@@ -19,7 +17,6 @@ Router.map(function() {
     this.route('song', { path: "song"});
   });
 });
-
 
 
 export default Router;

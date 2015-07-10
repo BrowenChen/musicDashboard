@@ -1,0 +1,55 @@
+<style>
+	#cal-heatmap {
+		border: 1px solid green;
+		overflow: hidden;
+	}
+</style>
+
+
+
+
+
+
+{{yield}}
+Hey yo what UP
+asd
+<div id="cal-heatmap"></div>
+<script type="text/javascript">
+$.ajax({
+    url: '/gh/get/response.json/kamisama/cal-heatmap/tree/gh-pages/demo/'
+}).done(function (data) {
+    ///////////////////////////////////////////////////
+    // Edit from here    
+
+    moment.lang("fr");
+	var calendar = new CalHeatMap();
+	calendar.init({
+		data: data,
+		start: new Date(2000, 0),
+		domain : "month",
+		subDomain : "x_day",
+		range : 1,
+		verticalOrientation: true,
+		scale: [40, 60, 80, 100],
+		itemName: ["chat perdu", "chats perdus"],
+		cellLabel: {
+			empty: "Aucune données pour le {date}",
+			filled: "il y a eu {count} {name} le {date}"
+		},
+		scaleLabel: {
+			lower: "Belle journée, il y a eu moins de {min} {name}",
+			inner: "Pas mal, entre {down} et {up} {name}",
+			upper: "Peut faire mieux, plus de {max} {name}"
+		},
+		format: {
+			date: function(date) {
+				return moment(date).format("LL");
+			},
+			legend: null,
+		}
+	});
+
+    // End edition    
+    ///////////////////////////////////////////////////
+});
+</script>
